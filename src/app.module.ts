@@ -7,9 +7,10 @@ import { LoggerModule } from './logger/logger.module';
 import { RequestIdMiddleware } from './middleware/request-id-middleware';
 import { RandomModule } from './random/random.module';
 import { CounterModule } from './counter/counter.module';
+import { HelloModule } from './hello/hello.module';
 
 @Module({
-  imports: [DatabaseModule, UsersModule, LoggerModule, RandomModule, CounterModule],
+  imports: [DatabaseModule, UsersModule, LoggerModule, RandomModule, CounterModule, HelloModule],
   controllers: [AppController],
   providers: [AppService],
 })
