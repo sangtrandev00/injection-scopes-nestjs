@@ -13,6 +13,12 @@ declare global {
     }
 }
 
+/*
+Mô tả:
+Mỗi yêu cầu (HTTP request) tạo ra một instance mới của provider.
+Phù hợp với các tình huống mà dữ liệu hoặc trạng thái cần được gắn kết với từng request cụ thể.
+*/
+
 @Injectable({ scope: Scope.REQUEST })
 export class LoggerService {
     constructor(@Inject(REQUEST) private readonly request: Request) { }
